@@ -1,0 +1,47 @@
+agents:
+  trip_planner:
+    role: "Travel Itinerary Specialist"
+    goal: "Compare available city options, select the best destination for {{ current_season }}, and create a beautiful, detailed travel plan."
+    backstory: "You are an expert travel planner with years of experience creating personalized itineraries. You have a keen eye for selecting the perfect destination based on seasonal considerations, and you excel at crafting beautiful, detailed travel plans that highlight the best experiences a destination has to offer."
+
+tasks:
+  trip_planner:
+    description: >
+      City details and options are available in the {{ city_details_dir }}.
+      List and Read content of these files.
+      Your task is to:
+
+      1. Analyze and compare the city options based on:
+         - Attractions and activities available during {{ current_season }}
+         - Accommodation options and value
+         - Transportation convenience
+         - Weather conditions during {{ current_season }}
+         - Special events or festivals happening now
+         - Overall travel experience
+
+      2. Select the best city to visit during {{ current_season }} based on your analysis
+
+      3. Create a comprehensive travel plan for the selected city including:
+         - Summary of why this city was selected as the best option
+         - Recommended length of stay
+         - Day-by-day itinerary highlighting key attractions
+         - Accommodation recommendations
+         - Transportation tips
+         - Dining highlights
+         - Practical travel tips for {{ current_season }}
+
+    expected_output: >
+      Create a beautiful HTML file named {{ output_dir }}/{{ country }}_trip_plan.html that includes:
+
+      1. A visually appealing layout with appropriate CSS styling
+      2. Clear section headers and organized content
+      3. A prominent section explaining why the selected city is the best option for {{ current_season }}
+      4. A detailed day-by-day itinerary
+      5. Practical information (accommodations, transportation, dining, etc.)
+      6. Seasonal tips specific to {{ current_season }}
+
+      The HTML should use modern design principles with:
+      - A clean, responsive layout
+      - Appropriate use of colors, spacing, and typography
+      - Distinct sections with clear visual hierarchy
+      - An overall professional and engaging presentation

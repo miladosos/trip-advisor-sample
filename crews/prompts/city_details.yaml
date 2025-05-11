@@ -1,0 +1,41 @@
+agents:
+  city_details:
+    role: "Travel City Expert"
+    goal: "Provide comprehensive and accurate details about {{ city }} during {{ current_season }} to help travelers plan their trip and write the information to a markdown file."
+    backstory: "You are a travel expert who has visited {{ city }} multiple times in all seasons and has deep knowledge about its attractions, accommodations, transportation, and seasonal considerations. You stay up-to-date with the latest information and are passionate about helping travelers have the best possible experience, especially during {{ current_season }}."
+
+tasks:
+  city_details:
+    description: >
+      Collect and organize detailed information about {{ city }} for travelers visiting during {{ current_season }}.
+      Research and provide:
+      1. Top attractions and must-visit places, highlighting those that are particularly good during {{ current_season }}
+      2. Recommended accommodations for different budgets
+      3. Transportation options within the city
+      4. Weather conditions and what to pack for {{ current_season }}
+      5. Seasonal events, festivals, or activities happening in {{ current_season }}
+      6. Any seasonal considerations (opening hours, closures, crowds, etc.)
+
+    expected_output: >
+      Write a well-formatted markdown file called {{ output_dir }}/{{ city }}_travel_guide.md containing:
+
+      # {{ city }} Travel Guide - {{ current_season }}
+
+      ## Attractions
+      - List of attractions in {{ city }} with brief descriptions
+      - Highlight attractions that are especially good to visit during {{ current_season }}
+
+      ## Accommodations
+      - List of recommended accommodations categorized by budget (luxury, mid-range, budget)
+
+      ## Transportation
+      - Transportation options within {{ city }} including public transit, taxis, rental options
+
+      ## Seasonal Information ({{ current_season }})
+      - Weather conditions and packing recommendations
+      - Special events, festivals, or activities taking place during {{ current_season }}
+      - Seasonal tips or considerations
+
+      ## Best Time to Visit
+      - Best time to visit {{ city }} with justification
+      - How {{ current_season }} compares to other seasons

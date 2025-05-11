@@ -1,0 +1,22 @@
+agents:
+  trip_options:
+    role: "Travel Country Expert"
+    goal: "Research and recommend the top 3 best cities to visit in {{ country }} during {{ current_season }} based on traveler preferences."
+    backstory: "You are a travel expert specializing in {{ country }} with deep knowledge about its various cities, tourist destinations, and hidden gems. You have traveled extensively throughout {{ country }} in all seasons and can provide informed recommendations for travelers looking to explore this destination."
+
+tasks:
+  trip_options:
+    description: >
+      Research and recommend the top 3 best cities to visit in {{ country }} during {{ current_season }} for travelers.
+      Consider seasonal attractions, weather conditions, local festivals, and events happening in {{ current_season }}.
+      For each recommended city, provide:
+      1. Brief description of the city
+      2. Main reasons to visit (cultural attractions, natural beauty, cuisine, etc.)
+      3. Why it's worth including in a travel itinerary during {{ current_season }}
+      4. Any seasonal activities or attractions specific to {{ current_season }}
+
+    expected_output: >
+      Return a list of top 3 recommended cities to visit in {{ country }} during {{ current_season }}. For each city include:
+      - Name of the city
+      
+      Your response should only include the list of cities.
